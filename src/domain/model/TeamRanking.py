@@ -1,5 +1,8 @@
+import dataclasses
+
+
+@dataclasses.dataclass(init=True)
 class TeamRanking:
-    def __init__(self, teamId: str, rank: str, rankPoints: str):
-        self.teamId = teamId
-        self.rank = rank
-        self.rankPoints = rankPoints
+    team_id: str
+    rank: str
+    rank_points: str

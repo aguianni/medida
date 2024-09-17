@@ -1,17 +1,18 @@
+import dataclasses
+
+
+@dataclasses.dataclass(init=True)
 class Event:
-    def __init__(self, eventId: str, eventDate: str, eventTime: str, homeTeamId: str, homeTeamNickName: str,
-                 homeTeamCity: str, homeTeamRank: str, homeTeamRankPoints: str, awayTeamId: str,
-                 awayTeamNickName: str, awayTeamCity: str, awayTeamRank: str, awayTeamRankPoints: str):
-        self.eventId = eventId
-        self.eventDate = eventDate
-        self.eventTime = eventTime
-        self.homeTeamId = homeTeamId
-        self.homeTeamNickName = homeTeamNickName
-        self.homeTeamCity = homeTeamCity
-        self.homeTeamRank = homeTeamRank
-        self.homeTeamRankPoints = homeTeamRankPoints
-        self.awayTeamId = awayTeamId
-        self.awayTeamNickName = awayTeamNickName
-        self.awayTeamCity = awayTeamCity
-        self.awayTeamRank = awayTeamRank
-        self.awayTeamRankPoints = awayTeamRankPoints
+    event_id: str
+    event_date: str
+    event_time: str
+    home_team_id: str
+    home_team_nick_name: str
+    home_team_city: str
+    home_team_rank: str
+    home_team_rank_points: str
+    away_team_id: str
+    away_team_nick_name: str
+    away_team_city: str
+    away_team_rank: str
+    away_team_rank_points: str

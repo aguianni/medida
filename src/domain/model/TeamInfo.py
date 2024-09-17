@@ -1,5 +1,8 @@
+import dataclasses
+
+
+@dataclasses.dataclass(init=True)
 class TeamInfo:
-    def __init__(self, id: str, nickName: str, city: str):
-        self.id = id
-        self.nickName = nickName
-        self.city = city
+    id: str
+    nick_name: str
+    city: str

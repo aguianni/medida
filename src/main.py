@@ -4,9 +4,9 @@ from src.application.adapter.EventsMashupTaskAdapter import EventsMashupTaskAdap
 from src.application.port.input.EventsMashupTaskPort import EventsMashupTaskPort
 from src.application.port.out.ScoreBoardServicePort import ScoreBoardServicePort
 from src.application.port.out.TeamRanksServicePort import TeamRanksServicePort
-from src.infrastructure.input.EventController import router as event_router
-from src.infrastructure.out.ScoreBoardServiceAdapter import ScoreBoardServiceAdapter
-from src.infrastructure.out.TeamRanksServiceAdapter import TeamRanksServiceAdapter
+from src.infrastructure.adapter.input.EventControllerAdapter import router as event_router
+from src.infrastructure.adapter.out.ScoreBoardServiceAdapter import ScoreBoardServiceAdapter
+from src.infrastructure.adapter.out.TeamRanksServiceAdapter import TeamRanksServiceAdapter
 
 app = FastAPI()
 

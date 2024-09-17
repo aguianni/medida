@@ -24,21 +24,21 @@ async def test_empty_ok():
     app.dependency_overrides = {}
 
 
-async def events_mashup_task_port_run_data(league: League, startDate, endDate):
+async def events_mashup_task_port_run_data(league: League, start_date, end_date):
     return [{
-        "eventId": "5055c2a2-af68-4082-9834-ceb36dd0a807",
-        "eventDate": "2023-01-11",
-        "eventTime": "14:00:00",
-        "homeTeamId": "8da0c96d-7b3d-41f3-9e68-29607f3babcf",
-        "homeTeamNickName": "Atlanta Falcons",
-        "homeTeamCity": "Atlanta",
-        "homeTeamRank": 3,
-        "homeTeamRankPoints": 33.4,
-        "awayTeamId": "ae5132a4-e4b2-4bda-9933-b75c542b8d35",
-        "awayTeamNickName": "Arizona Cardinals",
-        "awayTeamCity": "Arizona",
-        "awayTeamRank": 1,
-        "awayTeamRankPoints": 100.3
+        "event_id": "5055c2a2-af68-4082-9834-ceb36dd0a807",
+        "event_date": "2023-01-11",
+        "event_time": "14:00:00",
+        "home_team_id": "8da0c96d-7b3d-41f3-9e68-29607f3babcf",
+        "home_team_nick_name": "Atlanta Falcons",
+        "home_team_city": "Atlanta",
+        "home_team_rank": 3,
+        "home_team_rank_points": 33.4,
+        "away_team_id": "ae5132a4-e4b2-4bda-9933-b75c542b8d35",
+        "away_team_nick_name": "Arizona Cardinals",
+        "away_team_city": "Arizona",
+        "away_team_rank": 1,
+        "away_team_rank_points": 100.3
     }]
 
 
@@ -49,19 +49,19 @@ async def test_data_ok():
         response = await ac.post("/api/events", json={"league": "NFL"})
     assert response.status_code == 200
     assert response.json() == [{
-        "eventId": "5055c2a2-af68-4082-9834-ceb36dd0a807",
-        "eventDate": "2023-01-11",
-        "eventTime": "14:00:00",
-        "homeTeamId": "8da0c96d-7b3d-41f3-9e68-29607f3babcf",
-        "homeTeamNickName": "Atlanta Falcons",
-        "homeTeamCity": "Atlanta",
-        "homeTeamRank": 3,
-        "homeTeamRankPoints": 33.4,
-        "awayTeamId": "ae5132a4-e4b2-4bda-9933-b75c542b8d35",
-        "awayTeamNickName": "Arizona Cardinals",
-        "awayTeamCity": "Arizona",
-        "awayTeamRank": 1,
-        "awayTeamRankPoints": 100.3
+        "event_id": "5055c2a2-af68-4082-9834-ceb36dd0a807",
+        "event_date": "2023-01-11",
+        "event_time": "14:00:00",
+        "home_team_id": "8da0c96d-7b3d-41f3-9e68-29607f3babcf",
+        "home_team_nick_name": "Atlanta Falcons",
+        "home_team_city": "Atlanta",
+        "home_team_rank": 3,
+        "home_team_rank_points": 33.4,
+        "away_team_id": "ae5132a4-e4b2-4bda-9933-b75c542b8d35",
+        "away_team_nick_name": "Arizona Cardinals",
+        "away_team_city": "Arizona",
+        "away_team_rank": 1,
+        "away_team_rank_points": 100.3
     }]
     app.dependency_overrides = {}
 
@@ -206,79 +206,79 @@ async def test_injection_data_ok():
     assert response.status_code == 200
     assert response.json() == [
         {
-            "eventId": "5055c2a2-af68-4082-9834-ceb36dd0a807",
-            "eventDate": "2023-01-11",
-            "eventTime": "14:00:00",
-            "homeTeamId": "8da0c96d-7b3d-41f3-9e68-29607f3babcf",
-            "homeTeamNickName": "Atlanta Falcons",
-            "homeTeamCity": "Atlanta",
-            "homeTeamRank": 3,
-            "homeTeamRankPoints": 33.4,
-            "awayTeamId": "ae5132a4-e4b2-4bda-9933-b75c542b8d35",
-            "awayTeamNickName": "Arizona Cardinals",
-            "awayTeamCity": "Arizona",
-            "awayTeamRank": 1,
-            "awayTeamRankPoints": 100.3
+            "event_id": "5055c2a2-af68-4082-9834-ceb36dd0a807",
+            "event_date": "2023-01-11",
+            "event_time": "14:00:00",
+            "home_team_id": "8da0c96d-7b3d-41f3-9e68-29607f3babcf",
+            "home_team_nick_name": "Atlanta Falcons",
+            "home_team_city": "Atlanta",
+            "home_team_rank": 3,
+            "home_team_rank_points": 33.4,
+            "away_team_id": "ae5132a4-e4b2-4bda-9933-b75c542b8d35",
+            "away_team_nick_name": "Arizona Cardinals",
+            "away_team_city": "Arizona",
+            "away_team_rank": 1,
+            "away_team_rank_points": 100.3
         },
         {
-            "eventId": "d9c18865-f89d-41de-a42e-5e4bdc2b305a",
-            "eventDate": "2023-02-28",
-            "eventTime": "21:30:00",
-            "homeTeamId": "9ebdd9c1-b445-4076-afe1-5463cacc9138",
-            "homeTeamNickName": "Carolina Panthers",
-            "homeTeamCity": "Carolina",
-            "homeTeamRank": 2,
-            "homeTeamRankPoints": 63.9,
-            "awayTeamId": "8da0c96d-7b3d-41f3-9e68-29607f3babcf",
-            "awayTeamNickName": "Atlanta Falcons",
-            "awayTeamCity": "Atlanta",
-            "awayTeamRank": 3,
-            "awayTeamRankPoints": 33.4
+            "event_id": "d9c18865-f89d-41de-a42e-5e4bdc2b305a",
+            "event_date": "2023-02-28",
+            "event_time": "21:30:00",
+            "home_team_id": "9ebdd9c1-b445-4076-afe1-5463cacc9138",
+            "home_team_nick_name": "Carolina Panthers",
+            "home_team_city": "Carolina",
+            "home_team_rank": 2,
+            "home_team_rank_points": 63.9,
+            "away_team_id": "8da0c96d-7b3d-41f3-9e68-29607f3babcf",
+            "away_team_nick_name": "Atlanta Falcons",
+            "away_team_city": "Atlanta",
+            "away_team_rank": 3,
+            "away_team_rank_points": 33.4
         },
         {
-            "eventId": "bf436983-3c42-4e45-893d-3f89d0ef3451",
-            "eventDate": "2023-01-30",
-            "eventTime": "16:30:00",
-            "homeTeamId": "28851743-d1b5-4653-9f25-bda3a386c825",
-            "homeTeamNickName": "Detroit Lions",
-            "homeTeamCity": "Detroit",
-            "homeTeamRank": 5,
-            "homeTeamRankPoints": 10.2,
-            "awayTeamId": "59a25bfb-e316-42c1-ac75-fc62aa34df48",
-            "awayTeamNickName": "Chicago Bears",
-            "awayTeamCity": "Chicago",
-            "awayTeamRank": 4,
-            "awayTeamRankPoints": 18.76
+            "event_id": "bf436983-3c42-4e45-893d-3f89d0ef3451",
+            "event_date": "2023-01-30",
+            "event_time": "16:30:00",
+            "home_team_id": "28851743-d1b5-4653-9f25-bda3a386c825",
+            "home_team_nick_name": "Detroit Lions",
+            "home_team_city": "Detroit",
+            "home_team_rank": 5,
+            "home_team_rank_points": 10.2,
+            "away_team_id": "59a25bfb-e316-42c1-ac75-fc62aa34df48",
+            "away_team_nick_name": "Chicago Bears",
+            "away_team_city": "Chicago",
+            "away_team_rank": 4,
+            "away_team_rank_points": 18.76
         },
         {
-            "eventId": "7d6e1536-231a-4451-b40a-6bf0bcd2e7c3",
-            "eventDate": "2023-03-08",
-            "eventTime": "18:30:00",
-            "homeTeamId": "2f784ca2-9964-4d95-8d0d-67e553a70c40",
-            "homeTeamNickName": "Dallas Cowboys",
-            "homeTeamCity": "Dallas",
-            "homeTeamRank": 6,
-            "homeTeamRankPoints": 11.01,
-            "awayTeamId": "9ebdd9c1-b445-4076-afe1-5463cacc9138",
-            "awayTeamNickName": "Carolina Panthers",
-            "awayTeamCity": "Carolina",
-            "awayTeamRank": 2,
-            "awayTeamRankPoints": 63.9
+            "event_id": "7d6e1536-231a-4451-b40a-6bf0bcd2e7c3",
+            "event_date": "2023-03-08",
+            "event_time": "18:30:00",
+            "home_team_id": "2f784ca2-9964-4d95-8d0d-67e553a70c40",
+            "home_team_nick_name": "Dallas Cowboys",
+            "home_team_city": "Dallas",
+            "home_team_rank": 6,
+            "home_team_rank_points": 11.01,
+            "away_team_id": "9ebdd9c1-b445-4076-afe1-5463cacc9138",
+            "away_team_nick_name": "Carolina Panthers",
+            "away_team_city": "Carolina",
+            "away_team_rank": 2,
+            "away_team_rank_points": 63.9
         },
         {
-            "eventId": "2d98e984-1197-42c5-80a0-083667891f51",
-            "eventDate": "2023-05-24",
-            "eventTime": "22:00:00",
-            "homeTeamId": "59a25bfb-e316-42c1-ac75-fc62aa34df48",
-            "homeTeamNickName": "Chicago Bears",
-            "homeTeamCity": "Chicago",
-            "homeTeamRank": 4,
-            "homeTeamRankPoints": 18.76,
-            "awayTeamId": "2f784ca2-9964-4d95-8d0d-67e553a70c40",
-            "awayTeamNickName": "Dallas Cowboys",
-            "awayTeamCity": "Dallas",
-            "awayTeamRank": 6,
-            "awayTeamRankPoints": 11.01
+            "event_id": "2d98e984-1197-42c5-80a0-083667891f51",
+            "event_date": "2023-05-24",
+            "event_time": "22:00:00",
+            "home_team_id": "59a25bfb-e316-42c1-ac75-fc62aa34df48",
+            "home_team_nick_name": "Chicago Bears",
+            "home_team_city": "Chicago",
+            "home_team_rank": 4,
+            "home_team_rank_points": 18.76,
+            "away_team_id": "2f784ca2-9964-4d95-8d0d-67e553a70c40",
+            "away_team_nick_name": "Dallas Cowboys",
+            "away_team_city": "Dallas",
+            "away_team_rank": 6,
+            "away_team_rank_points": 11.01
         }
     ]
     app.dependency_overrides = {}
@@ -291,24 +291,24 @@ async def test_injection_data_filter_ok():
     app.dependency_overrides[EventsMashupTaskPort] = EventsMashupTaskAdapter
     async with AsyncClient(app=app, base_url="http://test") as ac:
         response = await ac.post("/api/events", json={"league": "NFL",
-                                                      "startDate": "2023-01-11",
-                                                      "endDate": "2023-01-11"})
+                                                      "start_date": "2023-01-11",
+                                                      "end_date": "2023-01-11"})
     assert response.status_code == 200
     assert response.json() == [
         {
-            "eventId": "5055c2a2-af68-4082-9834-ceb36dd0a807",
-            "eventDate": "2023-01-11",
-            "eventTime": "14:00:00",
-            "homeTeamId": "8da0c96d-7b3d-41f3-9e68-29607f3babcf",
-            "homeTeamNickName": "Atlanta Falcons",
-            "homeTeamCity": "Atlanta",
-            "homeTeamRank": 3,
-            "homeTeamRankPoints": 33.4,
-            "awayTeamId": "ae5132a4-e4b2-4bda-9933-b75c542b8d35",
-            "awayTeamNickName": "Arizona Cardinals",
-            "awayTeamCity": "Arizona",
-            "awayTeamRank": 1,
-            "awayTeamRankPoints": 100.3
+            "event_id": "5055c2a2-af68-4082-9834-ceb36dd0a807",
+            "event_date": "2023-01-11",
+            "event_time": "14:00:00",
+            "home_team_id": "8da0c96d-7b3d-41f3-9e68-29607f3babcf",
+            "home_team_nick_name": "Atlanta Falcons",
+            "home_team_city": "Atlanta",
+            "home_team_rank": 3,
+            "home_team_rank_points": 33.4,
+            "away_team_id": "ae5132a4-e4b2-4bda-9933-b75c542b8d35",
+            "away_team_nick_name": "Arizona Cardinals",
+            "away_team_city": "Arizona",
+            "away_team_rank": 1,
+            "away_team_rank_points": 100.3
         }
     ]
     app.dependency_overrides = {}
@@ -321,8 +321,21 @@ async def test_injection_data_bad_league_ok():
     app.dependency_overrides[EventsMashupTaskPort] = EventsMashupTaskAdapter
     async with AsyncClient(app=app, base_url="http://test") as ac:
         response = await ac.post("/api/events", json={"league": "NBA"})
-    assert response.status_code == 404
+    assert response.status_code == 422
     assert response.json() == {
-            "detail": "League not found"
-        }
+        "detail": [
+            {
+                "type": "enum",
+                "loc": [
+                    "body",
+                    "league"
+                ],
+                "msg": "Input should be 'NFL'",
+                "input": "NBA",
+                "ctx": {
+                    "expected": "'NFL'"
+                }
+            }
+        ]
+    }
     app.dependency_overrides = {}
